@@ -1,38 +1,228 @@
-.App {
-  text-align: center;
+:root{
+    --bg-color:black;
+    --text-color:#FFC845;
+    --text-color-secondary:snow;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Google Sans Code";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.active{
+    text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Navbar{
+    position:fixed;
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 10vh;
+    width: 100vw;
+    place-items: center;
+    z-index: 9999;
+    
 }
 
-.App-link {
-  color: #61dafb;
+.navbarItem{
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    border-style: none;
+    text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbarItem:hover{
+    transform: scale(1.1);
+    text-shadow: 0 0 10px var(--text-color), 0 0 20px var(--text-color);
 }
+
+.modeChanger{
+
+    border-style: solid;
+    border-color: var(--text-color);
+    padding: 10px;
+    border-radius: 1rem;
+    background-color: transparent;
+    color: var(--text-color-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.modeChanger:hover{
+    transform: scale(1.03);
+}
+
+
+.mode{
+    color:#FFC845 ;
+}
+
+.ImageContainer{
+    width: fit-content;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 3rem;
+    box-shadow: 0 0 10px var(--text-color), 0 0 20px var(--text-color);
+}
+
+.aboutUsImage{
+    height: 100%!important;
+    place-items: center;
+    border-radius: 3rem;
+    
+}
+.aboutUsImageItem{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.aboutUsContainer{
+    padding: 5rem!important;
+    padding-top: calc(10vh + 5rem)!important;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+.myRow{
+ height: 70vh;
+
+}
+
+.portfolioHeader{
+    color: var(--text-color);
+    text-align: center;
+}
+
+.portfolioText{
+    color: var(--text-color-secondary);
+    line-height: 1.7;
+
+}
+
+
+.projectsContainer{
+    background-color: var(--bg-color);
+}
+
+.Project{
+    border: solid var(--text-color-secondary) ;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.githubButton{
+    height: 2rem;
+    border-style: solid;
+    border-radius: 0.5rem;
+    border-color: var(--text-color-secondary);
+    background-color:var(--text-color-secondary);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.githubButton:hover{
+    box-shadow: 0 0 10px var(--text-color-secondary), 0 0 20px var(--text-color-secondary);
+}
+
+.githubIcon{
+    height: 100%;
+}
+.progressBarLabel{
+    width: 10%;
+}
+.progressBar{
+    width: 100%;
+    position: relative;
+    border-radius: 1rem;
+    background-color: gray;
+
+}
+.progressBar::before{
+    content: " ";
+    position: absolute;
+    background-color:var(--progress-color);
+    width: var(--progress-width);
+    height: 100%;
+    border-radius: 1rem;
+   background: repeating-linear-gradient(
+    45deg,
+    var(--progress-color),         /* zebra renk 1 */
+    var(--progress-color) 10px,
+    var(--strip-color),    /* zebra renk 2 */
+    var(--strip-color) 20px
+  );
+  transition: all 0.5s ease-in-out;
+}
+
+.progressBarContainer{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.skillsContainer{
+    background-color: var(--bg-color);
+}
+
+.skillsHeader{
+    text-align: center;
+    color: var(--text-color);
+}
+
+.skill{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.progressBarLabel{
+    color: var(--text-color);
+
+}
+
+.contactMeContainer{
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.contactMeHeader{
+    text-align: center;
+    color: var(--text-color);
+
+}
+
+.contactMeIcon{
+    height: 1em;
+    width: auto;
+}
+
+.contactMeRow{
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.iconHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
