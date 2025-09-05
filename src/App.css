@@ -131,6 +131,7 @@
     border-color: var(--text-color-secondary);
     background-color:var(--text-color-secondary);
     transition: all 0.3s ease-in-out;
+    color: var(--bg-color);
 
 }
 
